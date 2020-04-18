@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.brewferm.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_readingsFragment"
+            app:destination="@id/readingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingsFragment"
+        android:name="com.example.brewferm.ReadingsFragment"
+        android:label="fragment_readings"
+        tools:layout="@layout/fragment_readings">
+        <action
+            android:id="@+id/action_readingsFragment_to_setTargetFragment"
+            app:destination="@id/setTargetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setTargetFragment"
+        android:name="com.example.brewferm.setTargetFragment"
+        android:label="fragment_set_target"
+        tools:layout="@layout/fragment_set_target" />
+</navigation>
